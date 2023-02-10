@@ -66,19 +66,17 @@ GlobeMessageBox.prototype = {
     okClick,
     cancelClick
   }) {
-    if (title) {
-      this.setVisible(true)
-      this._btnOk.onclick = () =>{
-        this.setVisible(false)
-        if(okClick){
-          okClick()
-        }
+    this.setVisible(true)
+    this._btnOk.onclick = () =>{
+      this.setVisible(false)
+      if(okClick){
+        okClick()
       }
-      this._btnCancel.onclick = ()=>{
-        this.setVisible(false)
-        if(cancelClick){
-          cancelClick()
-        }
+    }
+    this._btnCancel.onclick = ()=>{
+      this.setVisible(false)
+      if(cancelClick){
+        cancelClick()
       }
     }
   }
