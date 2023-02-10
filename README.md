@@ -82,9 +82,10 @@ bindGloveEvent(){
 
 ## Usage
 
-绑定 Cesium 事件:
+所有函数:
 
 ```
+methods: {
     // 绘制点
     drawPoint() {
       this.flag = 0
@@ -591,6 +592,7 @@ bindGloveEvent(){
         console.log('面积量算', positions, rlt)
       })
     }
+}
 ```
 
 Copyright (c) 2023-02-09, 32237384@qq.com
