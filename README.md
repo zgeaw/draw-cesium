@@ -3,9 +3,9 @@
 Using npm:
 
 ```
-npm install draw-tools --save
+npm install draw-cesium --save
 
-import drawTools from 'draw-tools';
+import drawCesium from 'draw-cesium';
 
 ```
 
@@ -14,7 +14,7 @@ import drawTools from 'draw-tools';
 初始化:
 
 ```
-this.tracker = new drawTools(this.viewer)
+this.tracker = new drawCesium(this.viewer)
 this.bindGloveEvent()
 
 ```
