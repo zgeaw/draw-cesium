@@ -1,14 +1,14 @@
 {
-    "name": "draw-tools",
+    "name": "draw-cesium",
     "version": "1.0.0",
-    "title": "draw-tools",
+    "title": "draw-cesium",
     "description": "Cesium draw工具栏",
-    "homepage": "https://github.com/zgeaw/draw-tools",
+    "homepage": "https://github.com/zgeaw/draw-cesium",
     "keywords": [
         "Cesium",
         "draw"
     ],
-    "main": "dist/drawTools.js",
+    "main": "dist/drawCesium.js",
     "files": [
         "dist",
         "src",
@@ -19,12 +19,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/zgeaw/draw-tools"
+        "url": "https://github.com/zgeaw/draw-cesium"
     },
     "author": "zgeaw (32237384@qq.com)",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/zgeaw/draw-tools/issues"
+        "url": "https://github.com/zgeaw/draw-cesium/issues"
     },
     "dependencies": {},
     "devDependencies": {

@@ -14,8 +14,8 @@ module.exports = merge(webpackBaseConfig, {
     output: {
         path: path.resolve(__dirname, '../dist'),
         publicPath: '/dist/',
-        filename: 'drawTools.js',
-        library: 'drawTools',
+        filename: 'drawCesium.js',
+        library: 'drawCesium',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },
