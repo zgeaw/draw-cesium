@@ -168,7 +168,8 @@ export default class GlobePointDrawer {
     let point = this.viewer.entities.add({
       position: this.position,
       billboard: {
-        image: this.image
+        image: this.image,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     })
     point.oid = 0

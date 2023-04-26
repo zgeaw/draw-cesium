@@ -188,7 +188,8 @@ export default class GlobeCircleDrawer {
     let point = this.viewer.entities.add({
       position: cartesian,
       billboard: {
-        image: this.dragIcon
+        image: this.dragIcon,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     })
     point.oid = oid
@@ -200,7 +201,8 @@ export default class GlobeCircleDrawer {
     let point = this.viewer.entities.add({
       position: cartesian,
       billboard: {
-        image: this.dragIconLight
+        image: this.dragIconLight,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     })
     point.oid = oid
@@ -257,7 +259,8 @@ export default class GlobeCircleDrawer {
         outlineWidth: 1,
         style: Cesium.LabelStyle.FILL_AND_OUTLINE,
         eyeOffset: new Cesium.ConstantProperty(new Cesium.Cartesian3(0, 0, -9000)),
-        pixelOffset: new Cesium.Cartesian2(16, 16)
+        pixelOffset: new Cesium.Cartesian2(16, 16),
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       },
       polygon: new Cesium.PolygonGraphics({
         hierarchy: dynamicHierarchy,
@@ -265,13 +268,15 @@ export default class GlobeCircleDrawer {
         fill: this.fill,
         outline: this.outline,
         outlineWidth: this.outlineWidth,
-        outlineColor: this.outlineColor
+        outlineColor: this.outlineColor,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }),
       polyline: {
         positions: lineDynamicPositions,
         clampToGround: true,
         width: 2,
-        material: this.radiusLineMaterial
+        material: this.radiusLineMaterial,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     }
     if (this.extrudedHeight > 0) {
@@ -330,7 +335,8 @@ export default class GlobeCircleDrawer {
         outlineWidth: 1,
         style: Cesium.LabelStyle.FILL_AND_OUTLINE,
         eyeOffset: new Cesium.ConstantProperty(new Cesium.Cartesian3(0, 0, -9000)),
-        pixelOffset: new Cesium.Cartesian2(16, 16)
+        pixelOffset: new Cesium.Cartesian2(16, 16),
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       },
       polygon: new Cesium.PolygonGraphics({
         hierarchy: dynamicHierarchy,
@@ -338,13 +344,15 @@ export default class GlobeCircleDrawer {
         fill: this.fill,
         outline: this.outline,
         outlineWidth: this.outlineWidth,
-        outlineColor: this.outlineColor
+        outlineColor: this.outlineColor,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }),
       polyline: {
         positions: lineDynamicPositions,
         clampToGround: true,
         width: 2,
-        material: this.radiusLineMaterial
+        material: this.radiusLineMaterial,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     }
     if (this.extrudedHeight > 0) {
@@ -374,7 +382,8 @@ export default class GlobeCircleDrawer {
         positions: outelinePositions,
         clampToGround: true,
         width: this.outlineWidth,
-        material: this.outlineMaterial
+        material: this.outlineMaterial,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     }
     this.outlineEntity = this.viewer.entities.add(bData)

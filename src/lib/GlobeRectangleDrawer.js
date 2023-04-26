@@ -183,7 +183,8 @@ export default class GlobeRectangleDrawer {
     let point = this.viewer.entities.add({
       position: cartesian,
       billboard: {
-        image: this.dragIconLight
+        image: this.dragIconLight,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     })
     point.oid = oid
@@ -234,14 +235,16 @@ export default class GlobeRectangleDrawer {
       rectangle: {
         coordinates: dynamicPositions,
         material: this.material,
-        show: this.fill
+        show: this.fill,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       },
       polyline: {
         positions: outlineDynamicPositions,
         clampToGround: true,
         width: this.outlineWidth,
         material: this.outlineMaterial,
-        show: this.outline
+        show: this.outline,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     }
     if (this.extrudedHeight > 0) {
@@ -298,14 +301,16 @@ export default class GlobeRectangleDrawer {
       rectangle: {
         coordinates: dynamicPositions,
         material: this.material,
-        show: this.fill
+        show: this.fill,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       },
       polyline: {
         positions: outlineDynamicPositions,
         clampToGround: true,
         width: this.outlineWidth,
         material: this.outlineMaterial,
-        show: this.outline
+        show: this.outline,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     }
     if (this.extrudedHeight > 0) {

@@ -244,7 +244,8 @@ export default class GlobePolylineSpaceMeasure {
         positions: dynamicPositions,
         clampToGround: false,
         width: 8,
-        material: this.material
+        material: this.material,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     }
     this.entity = this.viewer.entities.add(bData)
@@ -281,7 +282,8 @@ export default class GlobePolylineSpaceMeasure {
         positions: dynamicPositions,
         clampToGround: false,
         width: 8,
-        material: this.material
+        material: this.material,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     }
     this.entity = this.viewer.entities.add(bData)
@@ -375,7 +377,8 @@ export default class GlobePolylineSpaceMeasure {
     let bData = {
       position: cartesian,
       billboard: {
-        image: this.dragIconLight
+        image: this.dragIconLight,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     }
     let point = this.viewer.entities.add(bData)
@@ -389,7 +392,8 @@ export default class GlobePolylineSpaceMeasure {
     let point = this.viewer.entities.add({
       position: cartesian,
       billboard: {
-        image: this.dragIcon
+        image: this.dragIcon,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     })
     point.oid = oid

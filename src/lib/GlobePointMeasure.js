@@ -176,7 +176,8 @@ export default class GlobePointMeasure {
         disableDepthTestDistance: Number.POSITIVE_INFINITY
       },
       billboard: {
-        image: this.image
+        image: this.image,
+        disableDepthTestDistance: Number.POSITIVE_INFINITY
       }
     })
     point.oid = 0
